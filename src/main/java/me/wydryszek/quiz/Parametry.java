@@ -27,6 +27,13 @@ public class Parametry {
 		return czyKolor;
 	}
 
+	public void setCzyTimer(boolean timer) {
+		this.czyTimer=timer;
+	}
+
+	public boolean getCzyTimer() {
+		return czyTimer;
+	}
 
 	public void setCzyLosowac(boolean los) {
 		this.czyLosowac=los;
@@ -39,6 +46,7 @@ public class Parametry {
 	public Parametry() {
 		punkty=0;
 		czyKolor=false;
+		czyTimer=false;
 		czyLosowac=false;
 	};
 

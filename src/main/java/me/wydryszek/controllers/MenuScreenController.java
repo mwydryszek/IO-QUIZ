@@ -51,6 +51,14 @@ public class MenuScreenController {
 
     }
 
+    @FXML
+    public void timerOn() {
+        if (TimerCheckBox.isSelected()) {
+            par.setCzyTimer(true);
+        } else {
+            par.setCzyTimer(false);
+        }
+    }
 
     @FXML
     public void startQuiz() {
@@ -78,6 +86,12 @@ public class MenuScreenController {
             LosCheckBox.setSelected(true);
         else
             LosCheckBox.setSelected(false);
+
+        if (par.getCzyTimer())
+            TimerCheckBox.setSelected(true);
+        else
+            TimerCheckBox.setSelected(false);
+
     }
 
     public static String colorToHex(Color color) {

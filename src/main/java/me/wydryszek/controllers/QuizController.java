@@ -62,6 +62,8 @@ public class QuizController extends MenuScreenController {
 	@FXML
 	private Label odpD;
 
+	@FXML
+	private Label timeLeft;
 
 	private String odp;
 	private int index;
@@ -126,6 +128,22 @@ public class QuizController extends MenuScreenController {
 
 	}
 
+	Timeline timer = new Timeline(
+			new KeyFrame(Duration.seconds(1),
+					new EventHandler<ActionEvent>() {
+
+						@Override
+						public void handle(ActionEvent event) {
+							czas--;
+							timeLeft.setText(String.valueOf(czas));
+							if(czas<=0) {
+								if(par.getCzyLosowac()==false)
+									DisplayOdp();
+								else
+									DisplayOdpShuffle();
+							}
+						}
+					}));
 
 	public void nextQuestion() {
 
@@ -139,6 +157,12 @@ public class QuizController extends MenuScreenController {
 			odpB.setText(opcje[index][1]);
 			odpC.setText(opcje[index][2]);
 			odpD.setText(opcje[index][3]);
+			if(par.getCzyTimer()==true) {
+				timer.setCycleCount(Timeline.INDEFINITE);
+				timer.play();
+			}else {
+				timeLeft.setVisible(false);
+			}
 		}
 	}
 
@@ -156,11 +180,19 @@ public class QuizController extends MenuScreenController {
 			odpB.setText(opcje[random][1]);
 			odpC.setText(opcje[random][2]);
 			odpD.setText(opcje[random][3]);
+			if(par.getCzyTimer()==true) {
+				timer.setCycleCount(Timeline.INDEFINITE);
+				timer.play();
+			}else {
+				timeLeft.setVisible(false);
+			}
 			lista.removeIf( name -> name.equals(random));
 		}
 	}
 
 	public void DisplayOdp() {
+		if(par.getCzyTimer()==true)
+			timer.stop();
 
 		buttonA.setDisable(true);
 		buttonB.setDisable(true);
@@ -197,6 +229,7 @@ public class QuizController extends MenuScreenController {
 
 								odp = " ";
 								czas=10;
+								timeLeft.setText(String.valueOf(czas));
 								index++;
 								buttonA.setDisable(false);
 								buttonB.setDisable(false);
@@ -210,6 +243,8 @@ public class QuizController extends MenuScreenController {
 	}
 
 	public void DisplayOdpShuffle() {
+		if(par.getCzyTimer()==true)
+			timer.stop();
 
 		buttonA.setDisable(true);
 		buttonB.setDisable(true);
@@ -246,6 +281,7 @@ public class QuizController extends MenuScreenController {
 
 								odp = " ";
 								czas=10;
+								timeLeft.setText(String.valueOf(czas));
 								index++;
 								buttonA.setDisable(false);
 								buttonB.setDisable(false);
