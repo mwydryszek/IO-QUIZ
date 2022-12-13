@@ -1,0 +1,23 @@
+{
+  "trescPytania": [
+    "Jaka firma stworzyla Jave?",
+    "W którym roku Java zostala stworzona?",
+    "Jaka nazwe poczatkowo nosila Java?",
+    "Kto jest twórca Javy?",
+    "W którym roku zostala wydana JavaFX?"
+  ],
+  "opcje": [
+    ["A) Sun Microsystems","B) Visuality","C) Microsoft","D) Hitachi"],
+    ["A) 1980","B) 1996","C) 1979","D) 2001"],
+    ["A) NewC","B) Pure","C) Oak","D) Elemental"],
+    ["A) Ken Thompson","B) Bill Gates","C) James Gosling","D) Donald Knuth"],
+    ["A) 2001","B) 2003","C) 2005","D) 2008"]
+  ],
+  "odpowiedzi": [
+    "A",
+    "B",
+    "C",
+    "C",
+    "D"
+  ]
+}

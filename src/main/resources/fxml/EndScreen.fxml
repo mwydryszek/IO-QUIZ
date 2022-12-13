@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.wydryszek.controllers.EndScreenController">
+   <children>
+      <Label fx:id="wynik" alignment="CENTER" layoutX="147.0" layoutY="144.0" prefHeight="26.0" prefWidth="276.0" text="Twój wynik to: ">
+         <font>
+            <Font name="Noto Sans Armenian Regular" size="23.0" />
+         </font></Label>
+      <Label fx:id="procenty" alignment="CENTER" layoutX="204.0" layoutY="213.0" prefHeight="26.0" prefWidth="192.0" text="Procenty: " textFill="#305ec9">
+         <font>
+            <Font name="Noto Sans Armenian Regular" size="16.0" />
+         </font></Label>
+      <Button fx:id="PowrotButton" layoutX="235.0" layoutY="301.0" mnemonicParsing="false" onAction="#powrotMenu" text="Powrót do MENU">
+         <font>
+            <Font name="Noto Sans Armenian Bold" size="15.0" />
+         </font></Button>
+   </children>
+</Pane>

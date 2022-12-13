@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.wydryszek.controllers.QuizController">
+   <children>
+      <Label fx:id="nrPytania" alignment="CENTER" layoutX="225.0" layoutY="22.0" prefHeight="30.0" prefWidth="150.0" text="Pytanie X" textFill="#3a71bf">
+         <font>
+            <Font name="Noto Sans Armenian Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="trescPytania" alignment="CENTER" layoutX="64.0" layoutY="62.0" prefHeight="35.0" prefWidth="490.0" text="TREŚĆ PYTANIA" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" underline="true">
+         <font>
+            <Font name="Noto Sans Armenian Bold" size="21.0" />
+         </font></Label>
+      <Button fx:id="buttonA" layoutX="79.0" layoutY="122.0" mnemonicParsing="false" onAction="#OnActionButton" prefHeight="45.0" prefWidth="52.0" text="A" />
+      <Button fx:id="buttonB" layoutX="79.0" layoutY="178.0" mnemonicParsing="false" onAction="#OnActionButton" prefHeight="45.0" prefWidth="52.0" text="B" />
+      <Button fx:id="buttonC" layoutX="79.0" layoutY="240.0" mnemonicParsing="false" onAction="#OnActionButton" prefHeight="45.0" prefWidth="52.0" text="C" />
+      <Button fx:id="buttonD" layoutX="79.0" layoutY="302.0" mnemonicParsing="false" onAction="#OnActionButton" prefHeight="45.0" prefWidth="52.0" text="D" />
+      <Label fx:id="odpa" layoutX="166.0" layoutY="134.0" prefHeight="17.0" prefWidth="286.0" text="TRESC ODP A">
+         <font>
+            <Font name="Noto Sans Armenian Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="timeLeft" alignment="CENTER" layoutX="503.0" layoutY="307.0" prefHeight="58.0" prefWidth="60.0" text="10">
+         <font>
+            <Font name="Noto Sans Armenian Bold" size="35.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect></Label>
+      <Label fx:id="odpB" layoutX="166.0" layoutY="190.0" prefHeight="17.0" prefWidth="286.0" text="TRESC ODP B">
+         <font>
+            <Font name="Noto Sans Armenian Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="odpC" layoutX="166.0" layoutY="252.0" prefHeight="17.0" prefWidth="286.0" text="TRESC ODP C">
+         <font>
+            <Font name="Noto Sans Armenian Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="odpD" layoutX="166.0" layoutY="314.0" prefHeight="17.0" prefWidth="286.0" text="TRESC ODP D">
+         <font>
+            <Font name="Noto Sans Armenian Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
