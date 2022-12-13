@@ -20,6 +20,10 @@ public class MenuScreenController {
     @FXML
     private CheckBox ColorCheckBox;
     @FXML
+    private CheckBox LosCheckBox;
+    @FXML
+    private CheckBox TimerCheckBox;
+    @FXML
     private ColorPicker GetColor;
     @FXML
     private Pane MenuPane;
@@ -37,6 +41,15 @@ public class MenuScreenController {
         }
     }
 
+    @FXML
+    public void losujPytania() {
+        if (LosCheckBox.isSelected()) {
+            par.setCzyLosowac(true);
+        } else {
+            par.setCzyLosowac(false);
+        }
+
+    }
 
 
     @FXML
@@ -61,6 +74,10 @@ public class MenuScreenController {
         else
             ColorCheckBox.setSelected(false);
 
+        if (par.getCzyLosowac())
+            LosCheckBox.setSelected(true);
+        else
+            LosCheckBox.setSelected(false);
     }
 
     public static String colorToHex(Color color) {
